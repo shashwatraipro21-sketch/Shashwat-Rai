@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashwat Rai | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #121821;
+      --text: #e6edf3;
+      --muted: #9aa4af;
+      --accent: #7c7cff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #101726, #0b0f14 60%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* subtle animated background dots */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(124,124,255,0.15) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.25;
+      animation: drift 30s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes drift {
+      from { background-position: 0 0; }
+      to { background-position: 400px 400px; }
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      max-width: 900px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 3rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .about {
+      margin-bottom: 2rem;
+      line-height: 1.7;
+      color: #cfd7df;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tag {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      border-radius: 999px;
+      background: rgba(124,124,255,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(124,124,255,0.25);
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .box {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .box h3 {
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    .box p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* blinking cursor effect */
+    .cursor::after {
+      content: "|";
+      margin-left: 4px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .card { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="card">
+      <h1 class="cursor">Shashwat <span>Rai</span></h1>
+      <div class="subtitle">Class 11 • NEET Aspirant • Varanasi</div>
+
+      <p class="about">
+        I’m a science student deeply focused on <strong>NEET preparation</strong>, with a parallel obsession for
+        <strong>geopolitics</strong>, global power structures, and <strong>conspiracy theories</strong>. I also explore
+        the world of <strong>coding</strong> to understand systems, logic, and how things truly work beneath the surface.
+      </p>
+
+      <div class="tags">
+        <div class="tag">NEET 2026</div>
+        <div class="tag">Biology</div>
+        <div class="tag">Geopolitics</div>
+        <div class="tag">Conspiracy Research</div>
+        <div class="tag">Coding</div>
+        <div class="tag">Critical Thinking</div>
+      </div>
+
+      <div class="sections">
+        <div class="box">
+          <h3>🧠 Academic Focus</h3>
+          <p>
+            Preparing for NEET with a strong inclination towards biology, human systems, and analytical learning.
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>🌍 Geopolitics</h3>
+          <p>
+            Interested in international relations, power dynamics, hidden narratives, and global strategies.
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>💻 Coding</h3>
+          <p>
+            Learning programming to build projects, websites, and logical tools while sharpening problem‑solving skills.
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>🕶 Mindset</h3>
+          <p>
+            Curious, observant, independent thinker — questioning everything and trusting data over noise.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <footer>
+    © 2026 Shashwat Rai • Built with focus and curiosity
+  </footer>
+
+</body>
+</html>
